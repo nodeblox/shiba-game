@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://by6cnayn52bcf"]
+
+[ext_resource type="Script" uid="uid://cf6fqxrp0geff" path="res://player.gd" id="1_0xm2m"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ig7tw"]
+load_path = "res://.godot/imported/player_back.png-878f81e0be074a8825779dd2ea831ade.ctex"
+
+[node name="Node" type="Node"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_0xm2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+scale = Vector2(10, 10)
+texture = SubResource("CompressedTexture2D_ig7tw")
