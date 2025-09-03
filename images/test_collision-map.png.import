@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkqv5mmp0ataj"
-path="res://.godot/imported/icon.jpg-64f68b30ea939aa8019167e67dffb2db.ctex"
+uid="uid://di7wphr0cucd8"
+path="res://.godot/imported/test_collision-map.png-5cb0d1cee396eaf93d0f43e114359287.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/icon.jpg"
-dest_files=["res://.godot/imported/icon.jpg-64f68b30ea939aa8019167e67dffb2db.ctex"]
+source_file="res://images/test_collision-map.png"
+dest_files=["res://.godot/imported/test_collision-map.png-5cb0d1cee396eaf93d0f43e114359287.ctex"]
 
 [params]
 

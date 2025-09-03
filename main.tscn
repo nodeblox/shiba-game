@@ -1,15 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://by6cnayn52bcf"]
+[gd_scene load_steps=4 format=3 uid="uid://by6cnayn52bcf"]
 
 [ext_resource type="Script" uid="uid://cf6fqxrp0geff" path="res://player.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://di7wphr0cucd8" path="res://images/test_collision-map.png" id="1_h2yge"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ig7tw"]
 load_path = "res://.godot/imported/player_back.png-878f81e0be074a8825779dd2ea831ade.ctex"
 
 [node name="Node" type="Node"]
 
+[node name="CollisionMap" type="Sprite2D" parent="."]
+texture = ExtResource("1_h2yge")
+
 [node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("1_0xm2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-scale = Vector2(10, 10)
 texture = SubResource("CompressedTexture2D_ig7tw")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(7, 7)
