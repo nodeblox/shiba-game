@@ -57,6 +57,9 @@ func _process(delta: float) -> void:
 		$AnimationPlayer.play("walk_left")
 	if velocity.x == 0 && velocity.y == 0:
 		$AnimationPlayer.stop()
+	else:
+		if $AudioStreamPlayer.has_stream_playback() == false:
+			$AudioStreamPlayer.play()
 	
 	move_and_slide()
 	

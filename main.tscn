@@ -1,8 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://by6cnayn52bcf"]
+[gd_scene load_steps=13 format=3 uid="uid://by6cnayn52bcf"]
 
 [ext_resource type="Texture2D" uid="uid://di7wphr0cucd8" path="res://images/test_collision-map.png" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://csdtntvywnxvj" path="res://images/player_sprites.png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://cf6fqxrp0geff" path="res://player.gd" id="2_h2yge"]
+[ext_resource type="AudioStream" uid="uid://b0x7cfuq7nuuj" path="res://sounds/effects/walk.wav" id="4_1bvp3"]
+[ext_resource type="AudioStream" uid="uid://b31xd8m0fbydh" path="res://sounds/music/track1.wav" id="5_lquwl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
+size = Vector2(10, 20)
 
 [sub_resource type="Animation" id="Animation_h2yge"]
 length = 0.001
@@ -21,7 +26,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_1bvp3"]
 resource_name = "walk_down"
-length = 0.8
+length = 0.525
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -30,27 +35,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
-}
-
-[sub_resource type="Animation" id="Animation_lquwl"]
-resource_name = "walk_up"
-length = 0.8
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [4, 5, 6, 7]
 }
 
 [sub_resource type="Animation" id="Animation_7mycd"]
@@ -87,6 +75,23 @@ tracks/0/keys = {
 "values": [12, 13, 14, 15]
 }
 
+[sub_resource type="Animation" id="Animation_lquwl"]
+resource_name = "walk_up"
+length = 0.525
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7mycd"]
 _data = {
 &"RESET": SubResource("Animation_h2yge"),
@@ -98,11 +103,16 @@ _data = {
 
 [node name="Node" type="Node"]
 
+[node name="Map" type="Sprite2D" parent="."]
+
 [node name="CollisionMap" type="Sprite2D" parent="."]
 texture = ExtResource("1_h2yge")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("2_h2yge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_lquwl")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 texture = ExtResource("2_0xm2m")
@@ -116,3 +126,11 @@ zoom = Vector2(7, 7)
 libraries = {
 &"": SubResource("AnimationLibrary_7mycd")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("4_1bvp3")
+volume_db = -10.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_lquwl")
+autoplay = true
