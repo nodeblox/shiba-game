@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://by6cnayn52bcf"]
+
+[ext_resource type="Texture2D" uid="uid://di7wphr0cucd8" path="res://images/test_collision-map.png" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://cdr8ammmsm7jx" path="res://player_textures.gd" id="2_0xm2m"]
+
+[sub_resource type="GDScript" id="GDScript_h2yge"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ig7tw"]
+load_path = "res://.godot/imported/player_back.png-878f81e0be074a8825779dd2ea831ade.ctex"
+
+[node name="Node" type="Node"]
+
+[node name="CollisionMap" type="Sprite2D" parent="."]
+texture = ExtResource("1_h2yge")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = SubResource("GDScript_h2yge")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = SubResource("CompressedTexture2D_ig7tw")
+script = ExtResource("2_0xm2m")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(7, 7)

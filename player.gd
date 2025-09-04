@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 const ACCEL = 30.0
 const DECEL = 10.0
 
@@ -48,6 +47,17 @@ func _process(delta: float) -> void:
 		velocity.x *= 0.75
 		velocity.y *= 0.75
 
+	if velocity.y > 0 && velocity.x == 0:
+		$AnimationPlayer.play("walk_down")
+	if velocity.y < 0 && velocity.x == 0:
+		$AnimationPlayer.play("walk_up")
+	if velocity.x > 0:
+		$AnimationPlayer.play("walk_right")
+	if velocity.x < 0:
+		$AnimationPlayer.play("walk_left")
+	if velocity.x == 0 && velocity.y == 0:
+		$AnimationPlayer.stop()
+	
 	move_and_slide()
 	
 	
