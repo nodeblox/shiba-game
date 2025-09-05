@@ -1,20 +1,18 @@
-[gd_scene load_steps=22 format=3 uid="uid://by6cnayn52bcf"]
+[gd_scene load_steps=20 format=3 uid="uid://by6cnayn52bcf"]
 
 [ext_resource type="Script" uid="uid://8047a26sqlmn" path="res://main.gd" id="1_7mycd"]
 [ext_resource type="Texture2D" uid="uid://di7wphr0cucd8" path="res://assets/images/test_collision-map.png" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://csdtntvywnxvj" path="res://assets/images/player_sprites.png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://cf6fqxrp0geff" path="res://scripts/player.gd" id="2_h2yge"]
 [ext_resource type="AudioStream" uid="uid://b0x7cfuq7nuuj" path="res://assets/audio/sound_effects/walk.wav" id="4_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://ybxthm4kv0pf" path="res://assets/images/dialog_box.png" id="5_kek77"]
 [ext_resource type="Script" uid="uid://dswoog6omhgot" path="res://scripts/dialog_box.gd" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://dq68fcrqlnyec" path="res://scripts/button.gd" id="7_5vw27"]
 [ext_resource type="Texture2D" uid="uid://ddp76whjcsxid" path="res://assets/images/icons/controller_button_a.png" id="7_272bh"]
-[ext_resource type="AudioStream" uid="uid://dk7pj6sp6ve3c" path="res://assets/audio/sound_effects/keypress.wav" id="9_4c57u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
 size = Vector2(10, 20)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4c57u"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_sj008"]
 atlas = ExtResource("7_272bh")
 region = Rect2(0, 0, 16, 16)
 
@@ -145,37 +143,31 @@ vframes = 4
 zoom = Vector2(7, 7)
 
 [node name="DialogBox" type="Sprite2D" parent="Player/Camera"]
-position = Vector2(0, 52)
-scale = Vector2(4.2, 4.2)
-texture = ExtResource("5_kek77")
 script = ExtResource("5_lquwl")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Player/Camera/DialogBox"]
-offset_left = -27.381
-offset_top = -5.95238
-offset_right = 13.619
-offset_bottom = 4.04762
+offset_left = -122.0
+offset_top = 25.0
+offset_right = 104.0
+offset_bottom = 64.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.0784314)
 bbcode_enabled = true
-vertical_alignment = 2
+text = "sdfdfsdfs"
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 
 [node name="NextButton" type="TextureButton" parent="Player/Camera/DialogBox"]
-offset_left = 23.0952
-offset_top = -0.714285
-offset_right = 39.0952
-offset_bottom = 15.2857
-texture_normal = SubResource("AtlasTexture_4c57u")
+offset_left = 101.0
+offset_top = 38.0
+offset_right = 130.0
+offset_bottom = 66.0
+texture_normal = SubResource("AtlasTexture_sj008")
 texture_pressed = SubResource("AtlasTexture_n7bek")
 texture_hover = SubResource("AtlasTexture_gj6c0")
 texture_disabled = SubResource("AtlasTexture_o85xu")
 stretch_mode = 5
 script = ExtResource("7_5vw27")
-
-[node name="CharSoundPlayer" type="AudioStreamPlayer" parent="Player/Camera/DialogBox"]
-stream = ExtResource("9_4c57u")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
 libraries = {

@@ -1,0 +1,68 @@
+{
+  "dialog": [
+	{
+	  "speaker": "Professor Miller",
+	  "lines": {
+		"en": "Anthony, you need to hear me. [b]Mr. Brown has made more progress than we anticipated[/b], and he could [b]launch to Mars very soon[/b].",
+		"de": "Anthony, du musst mir zuhören. [b]Mr. Brown hat mehr Fortschritte gemacht, als wir erwartet haben[/b], und er könnte [b]sehr bald zum Mars starten[/b].",
+		"jp": "アンソニー、よく聞いてくれ。 [b]ブラウン氏は予想以上に進展している[/b]、そして [b]もうすぐ火星に向けて発射する可能性がある[/b]。"
+	  }
+	},
+	{
+	  "speaker": "Anthony",
+	  "lines": {
+		"en": "Professor, how soon are we talking? [b]Weeks? Days?[/b]",
+		"de": "Professor, wie bald reden wir? [b]Wochen? Tage?[/b]",
+		"jp": "教授、どれくらいすぐですか？[b]数週間？数日？[/b]"
+	  }
+	},
+	{
+	  "speaker": "Professor Miller",
+	  "lines": {
+		"en": "It could be just a matter of weeks. If you don’t act fast, [b]our project on Mars will be lost[/b]. Mr. Brown plans to [b]use Mars for his own gain[/b], and he won’t care about anyone else.",
+		"de": "Es könnten nur ein paar Wochen sein. Wenn du nicht schnell handelst, [b]wird unser Projekt auf dem Mars verloren sein[/b]. Mr. Brown plant, [b]den Mars für seine eigenen Zwecke zu nutzen[/b], und es kümmert ihn niemand anderes.",
+		"jp": "数週間の問題かもしれない。もし君が迅速に行動しなければ、[b]私たちの火星プロジェクトは失われる[/b]。ブラウン氏は[b]火星を自分の利益のために使う[/b]つもりで、他の誰も気にしないだろう。"
+	  }
+	},
+	{
+	  "speaker": "Anthony",
+	  "lines": {
+		"en": "Use it for himself? But Professor, [b]that would destroy everything we’re trying to achieve[/b]!",
+		"de": "Für sich selbst nutzen? Aber Professor, [b]das würde alles zerstören, was wir erreichen wollen[/b]!",
+		"jp": "自分のために使う？でも教授、[b]それでは私たちが達成しようとしている全てが台無しになる[/b]！"
+	  }
+	},
+	{
+	  "speaker": "Professor Miller",
+	  "lines": {
+		"en": "Exactly, Anthony. [b]Earth is running out of space[/b]. Mars is [b]our only reachable alternative[/b] right now. If Mr. Brown gets there first, [b]our work could be gone before it even begins[/b].",
+		"de": "Genau, Anthony. [b]Auf der Erde wird der Platz knapp[/b]. Mars ist [b]derzeit unsere einzige erreichbare Alternative[/b]. Wenn Mr. Brown zuerst dort ist, [b]könnte unsere Arbeit verloren sein, bevor sie überhaupt beginnt[/b].",
+		"jp": "その通りだ、アンソニー。 [b]地球はもうスペースが不足している[/b]。火星は今、[b]私たちが到達できる唯一の代替地[/b]だ。もしブラウン氏が先に行けば、[b]私たちの仕事は始まる前に失われてしまう[/b]。"
+	  }
+	},
+	{
+	  "speaker": "Anthony",
+	  "lines": {
+		"en": "So what do you want me to do, Professor? [b]How can I stop him[/b]?",
+		"de": "Also was willst du, dass ich tue, Professor? [b]Wie kann ich ihn stoppen[/b]?",
+		"jp": "では教授、私は何をすればいいのですか？[b]どうやって彼を止める[/b]？"
+	  }
+	},
+	{
+	  "speaker": "Professor Miller",
+	  "lines": {
+		"en": "You and your team have to move faster than ever. [b]Secure our technology, push the limits[/b]. [b]It all depends on you, Anthony[/b]. The future of [b]our project—and maybe humanity[/b] depends on what you do next.",
+		"de": "Du und dein Team müsst schneller vorgehen als je zuvor. [b]Sichert unsere Technologie, geht an die Grenzen[/b]. [b]Alles hängt von dir ab, Anthony[/b]. Die Zukunft [b]unseres Projekts – und vielleicht der Menschheit[/b] hängt davon ab, was du als Nächstes tust.",
+		"jp": "君と君のチームはこれまで以上に速く行動しなければならない。[b]私たちの技術を確保し、限界に挑むのだ[/b]。 [b]すべてはアンソニー、君次第だ[/b]。私たちのプロジェクト、そしておそらく人類の未来も、君が次に何をするかにかかっている。"
+	  }
+	},
+	{
+	  "speaker": "Anthony",
+	  "lines": {
+		"en": "Understood, Professor. [b]I won’t let our project fail[/b]. I’ll do whatever it takes to win [color=#96a7a8][font_size=22]My little race to Mars[/font_size][/color].",
+		"de": "Verstanden, Professor. [b]Ich werde nicht zulassen, dass unser Projekt scheitert[/b]. Ich werde alles tun, um [color=#96a7a8][font_size=22]Mein kleines Rennen zum Mars[/font_size][/color] zu gewinnen.",
+		"jp": "わかりました、教授。[b]私たちのプロジェクトを失敗させはしない[/b]。火星への小さなレースに勝つために、[color=#96a7a8][font_size=22]私の小さなレース[/font_size][/color]。"
+	  }
+	}
+  ]
+}

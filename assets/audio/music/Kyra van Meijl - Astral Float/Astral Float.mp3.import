@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxwcso5c467bd"
+path="res://.godot/imported/Astral Float.mp3-ad74ec80f74006fa6c83f99de4bc9eb8.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/Kyra van Meijl - Astral Float/Astral Float.mp3"
+dest_files=["res://.godot/imported/Astral Float.mp3-ad74ec80f74006fa6c83f99de4bc9eb8.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

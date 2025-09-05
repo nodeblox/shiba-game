@@ -1,14 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://cxweoh8astj13"]
+[gd_scene load_steps=13 format=3 uid="uid://cxweoh8astj13"]
 
-[ext_resource type="Texture2D" uid="uid://xr1q517mlxpx" path="res://images/title-screen.png" id="1_kh286"]
-[ext_resource type="Texture2D" uid="uid://ddp76whjcsxid" path="res://images/icons/controller_button_a.png" id="2_5hfq7"]
-[ext_resource type="Script" uid="uid://klcny4q73ext" path="res://start_button.gd" id="3_sj008"]
+[ext_resource type="Texture2D" uid="uid://xr1q517mlxpx" path="res://assets/images/title-screen.png" id="1_kh286"]
+[ext_resource type="Script" uid="uid://bjjk3ykkvhv8" path="res://scripts/title_screen.gd" id="1_n7bek"]
+[ext_resource type="Texture2D" uid="uid://ddp76whjcsxid" path="res://assets/images/icons/controller_button_a.png" id="2_5hfq7"]
+[ext_resource type="Script" uid="uid://klcny4q73ext" path="res://scripts/start_button.gd" id="3_sj008"]
+[ext_resource type="Texture2D" uid="uid://kj4prhtds17" path="res://assets/images/icons/volume_up.png" id="4_gj6c0"]
+[ext_resource type="Texture2D" uid="uid://d5otcibmyvqv" path="res://assets/images/icons/volume_off.png" id="5_o85xu"]
+[ext_resource type="Script" uid="uid://c1m8ku35rowmr" path="res://scripts/music_toggle_button.gd" id="6_o85xu"]
+[ext_resource type="AudioStream" uid="uid://dxwcso5c467bd" path="res://assets/audio/music/Kyra van Meijl - Astral Float/Astral Float.mp3" id="7_bvxly"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sj008"]
 atlas = ExtResource("2_5hfq7")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kw1yp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7bek"]
 atlas = ExtResource("2_5hfq7")
 region = Rect2(32, 0, 16, 16)
 
@@ -20,11 +25,8 @@ region = Rect2(16, 0, 16, 16)
 atlas = ExtResource("2_5hfq7")
 region = Rect2(48, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bvxly"]
-atlas = ExtResource("2_5hfq7")
-region = Rect2(16, 0, 16, 16)
-
 [node name="Title-screen" type="Node2D"]
+script = ExtResource("1_n7bek")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
@@ -32,31 +34,44 @@ scale = Vector2(5, 5)
 texture = ExtResource("1_kh286")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -18.0
-offset_top = 736.0
-offset_right = 1943.0
-offset_bottom = 947.0
+offset_top = 730.0
+offset_right = 1920.0
+offset_bottom = 940.0
 color = Color(0, 0, 0, 0.470588)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 726.0
-offset_top = 792.0
-offset_right = 960.0
-offset_bottom = 894.0
+offset_left = 729.0
+offset_top = 788.0
+offset_right = 963.0
+offset_bottom = 890.0
 bbcode_enabled = true
 text = "[font_size=80]Press[/font_size]"
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 
 [node name="StartButton" type="TextureButton" parent="."]
-offset_left = 935.0
-offset_top = 749.0
-offset_right = 1129.0
-offset_bottom = 933.0
+offset_left = 932.0
+offset_top = 744.0
+offset_right = 1126.0
+offset_bottom = 928.0
 texture_normal = SubResource("AtlasTexture_sj008")
-texture_pressed = SubResource("AtlasTexture_kw1yp")
+texture_pressed = SubResource("AtlasTexture_n7bek")
 texture_hover = SubResource("AtlasTexture_gj6c0")
 texture_disabled = SubResource("AtlasTexture_o85xu")
-texture_focused = SubResource("AtlasTexture_bvxly")
 stretch_mode = 6
 script = ExtResource("3_sj008")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_bvxly")
+autoplay = true
+
+[node name="MusicToggleButton" type="TextureButton" parent="."]
+offset_left = 1818.0
+offset_top = 10.0
+offset_right = 1909.0
+offset_bottom = 99.0
+toggle_mode = true
+texture_normal = ExtResource("4_gj6c0")
+texture_pressed = ExtResource("5_o85xu")
+stretch_mode = 5
+script = ExtResource("6_o85xu")
